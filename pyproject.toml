@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "non-panicked-character"
-version = "0.1.0"
+version = "0.0.0"
 description = ""
 authors = ["Morgan Jones <morgan.jones@veygo.com>"]
 readme = "README.md"
