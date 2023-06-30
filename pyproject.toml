@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "non-panicked-character"
+version = "0.1.0"
+description = ""
+authors = ["Morgan Jones <morgan.jones@veygo.com>"]
+readme = "README.md"
+packages = [{include = "non_panicked_character"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+names = "^0.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = [
+    "non_panicked_character/__init__.py:__version__",
+    "pyproject.toml:version"
+]
+
+branch = "main"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "pip install poetry && poetry build"
