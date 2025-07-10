@@ -1,6 +1,7 @@
 from non_panicked_character.npc import (
     generate_alignment,
     generate_background,
+    generate_backstory,
     generate_class,
     generate_name,
     generate_race
@@ -28,5 +29,10 @@ def test_generate_name_returns_a_name():
 
 def test_generate_race_returns_a_race():
     response = generate_race()
+    assert response is not None
+    assert isinstance(response, str)
+
+def test_generate_backstory_returns_a_backstory():
+    response = generate_backstory()
     assert response is not None
     assert isinstance(response, str)
